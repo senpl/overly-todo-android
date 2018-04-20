@@ -54,11 +54,11 @@ public class ExampleActivity extends AppCompatActivity implements BatListener, O
             add(new Goal("third"));
             add(new Goal("fourth"));
             add(new Goal("fifth"));
-            add(new Goal("sixth"));
-            add(new Goal("seventh"));
-            add(new Goal("eighth"));
-            add(new Goal("ninth"));
-            add(new Goal("tenth"));
+//            add(new Goal("sixth"));
+//            add(new Goal("seventh"));
+//            add(new Goal("eighth"));
+//            add(new Goal("ninth"));
+//            add(new Goal("tenth"));
         }}, this, mAnimator).setOnItemClickListener(this).setOnOutsideClickListener(this));
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new BatCallback(this));
