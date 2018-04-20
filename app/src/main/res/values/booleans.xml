@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="default_popup_sound_enabled">false</bool>
+    <bool name="default_auto_mark_seen">false</bool>
+    <bool name="default_prefill_with_current_time">true</bool>
+    <bool name="default_24h_format">true</bool>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Material Date Time Picker-->
+    <string name="define_int_MaterialDTPicker"/>
+    <string name="library_MaterialDTPicker_author">wdullaer</string>
+    <string name="library_MaterialDTPicker_authorWebsite">https://github.com/wdullaer</string>
+    <string name="library_MaterialDTPicker_libraryName">Material Date Time Picker</string>
+    <string name="library_MaterialDTPicker_libraryDescription">Pick a date or time on Android in style</string>
+    <string name="library_MaterialDTPicker_libraryVersion">3.2.1</string>
+    <string name="library_MaterialDTPicker_libraryWebsite">https://github.com/wdullaer/MaterialDateTimePicker</string>
+    <string name="library_MaterialDTPicker_licenseId">apache_2_0</string>
+    <string name="library_MaterialDTPicker_isOpenSource">true</string>
+    <string name="library_MaterialDTPicker_repositoryLink">https://github.com/wdullaer/MaterialDateTimePicker</string>
+
+    <!--Material Seekbar Preference-->
+    <string name="define_int_MaterialSeekbarPref"/>
+    <string name="library_MaterialSeekbarPref_author">Pavel Sikun</string>
+    <string name="library_MaterialSeekbarPref_authorWebsite">https://github.com/MrBIMC</string>
+    <string name="library_MaterialSeekbarPref_libraryName">Material SeekBar Preference</string>
+    <string name="library_MaterialSeekbarPref_libraryDescription">The best yet Implemetation of SeekBarPreference. Works on API-v7 and up.</string>
+    <string name="library_MaterialSeekbarPref_libraryVersion">2.3.0</string>
+    <string name="library_MaterialSeekbarPref_libraryWebsite">https://github.com/MrBIMC/MaterialSeekBarPreference</string>
+    <string name="library_MaterialSeekbarPref_licenseId">apache_2_0</string>
+    <string name="library_MaterialSeekbarPref_isOpenSource">true</string>
+    <string name="library_MaterialSeekbarPref_repositoryLink">https://github.com/MrBIMC/MaterialSeekBarPreference</string>
+</resources>

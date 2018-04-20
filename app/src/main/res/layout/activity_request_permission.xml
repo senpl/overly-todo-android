@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="batrand.android.popupreminder.android.RequestPermissionActivity">
+
+    <include layout="@layout/view_titlebar"/>
+
+    <TextView
+        android:id="@+id/permissionExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/permission_explanation"
+        android:layout_centerInParent="true"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/requestPermissionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/grant_permission"
+        android:layout_below="@id/permissionExplanation"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

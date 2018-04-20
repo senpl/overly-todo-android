@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/prefstring_pref_cat_popups"
+        android:key="@string/prefkey_pref_cat_popups">
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_popup_sound_enabled"
+            android:key="@string/prefkey_pref_popup_sound_enabled"
+            android:title="@string/prefstring_pref_popup_sound_enabled" />
+        <ListPreference
+            android:defaultValue="@string/default_popup_sound"
+            android:entries="@array/popup_sounds_readable"
+            android:entryValues="@array/popup_sounds_values"
+            android:key="@string/prefkey_pref_popup_sound"
+            android:title="@string/prefstring_pref_popup_sound" />
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:key="@string/prefkey_pref_popup_sound_vol"
+            android:title="@string/prefstring_pref_popup_sound_vol"
+            android:enabled="true"
+            android:defaultValue="@string/default_popup_sound_volume"
+            app:msbp_minValue="1"
+            app:msbp_maxValue="100"
+            app:msbp_interval="1"
+            app:msbp_view_enabled="false"
+            app:msbp_dialogEnabled="false"/>
+        <Preference
+            android:key="@string/prefkey_pref_play_popup_sound"
+            android:title="@string/prefstring_pref_play_popup_sound"/>
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_auto_mark_seen"
+            android:key="@string/prefkey_pref_auto_mark_seen"
+            android:summary="@string/prefdesc_pref_auto_mark_seen"
+            android:title="@string/prefstring_pref_auto_mark_seen" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/prefstring_pref_cat_reminders"
+        android:key="@string/prefkey_pref_cat_reminders">
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_prefill_with_current_time"
+            android:key="@string/prefkey_pref_prefill_with_current_time"
+            android:summary="@string/prefdesc_pref_prefill_with_current_time"
+            android:title="@string/prefstring_pref_prefill_with_current_time" />
+        <EditTextPreference
+            android:defaultValue="@string/default_interval"
+            android:key="@string/prefkey_pref_default_interval"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/prefstring_pref_default_interval" />
+        <ListPreference
+            android:defaultValue="@string/default_interval_type"
+            android:entries="@array/interval_types"
+            android:entryValues="@array/interval_types_values"
+            android:key="@string/prefkey_pref_default_interval_type"
+            android:title="@string/prefstring_pref_default_interval_type" />
+    </PreferenceCategory>
+</PreferenceScreen>

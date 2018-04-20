@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://stackoverflow.com/a/37048717/6478240-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dismiss_view_edge"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="@dimen/dismiss_view_edge"
+        android:right="@dimen/dismiss_view_edge"
+        android:top="@dimen/dismiss_view_edge"
+        android:bottom="@dimen/dismiss_view_edge">
+        <shape android:shape="oval">
+            <solid android:color="@color/dismiss_view_foreground"/>
+        </shape>
+    </item>
+</layer-list>

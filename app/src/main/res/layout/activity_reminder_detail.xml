@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addreminder_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="batrand.android.popupreminder.views.ReminderDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/page_padding">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reminder_title" />
+
+        <EditText
+            android:id="@+id/reminderTitleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reminder_context" />
+
+        <EditText
+            android:id="@+id/reminderContextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine|textImeMultiLine" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reminder_description" />
+
+        <EditText
+            android:id="@+id/reminderDescriptionField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine|textImeMultiLine" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reminder_time" />
+
+        <LinearLayout
+            android:id="@+id/reminder_time_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/triggerDateField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/date"
+                    style="@android:style/Widget.EditText" />
+
+                <View
+                    android:id="@+id/triggerDateFieldListener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/triggerDateField" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/triggerTimeField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/time"
+                    style="@android:style/Widget.EditText" />
+
+                <View
+                    android:id="@+id/triggerTimeFieldListener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/triggerTimeField" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/reminder_is_interval_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reminder_interval_label"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/reminder_interval_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/intervalField"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:hint="@string/default_interval" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/intervalTypeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_hide_time" />
+        <LinearLayout
+            android:id="@+id/reminder_hide_time_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/hide_timeDateField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/date"
+                    style="@android:style/Widget.EditText" />
+
+                <View
+                    android:id="@+id/hide_timeDateFieldListener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/hide_timeDateField" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/hide_timeTimeField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/time"
+                    style="@android:style/Widget.EditText" />
+
+                <View
+                    android:id="@+id/hide_timeTimeFieldListener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/hide_timeTimeField" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/hide_is_interval_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reminder_interval_label"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center_vertical" />
+
+            <LinearLayout
+                android:id="@+id/hide_interval_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/intervalHideField"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:inputType="number"
+                    android:hint="@string/default_interval" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/intervalHideTypeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addreminder_donebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorAccent"
+        android:src="@drawable/check"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/log_menu_sort_asc"
+        android:title="@string/log_menu_sort_ascending"/>
+    <item
+        android:id="@+id/log_menu_sort_des"
+        android:title="@string/log_menu_sort_descending"/>
+    <item
+        android:id="@+id/log_menu_clear"
+        android:title="@string/log_menu_clear"/>
+
+    <item
+        android:id="@+id/log_menu_start_floater"
+        android:title="@string/log_menu_start_floater"/>
+</menu>

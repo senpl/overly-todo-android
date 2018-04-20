@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/floating_view_badge_edge"/>
+            <corners android:radius="@dimen/floating_view_badge_radius"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="@dimen/floating_view_badge_edge"
+        android:right="@dimen/floating_view_badge_edge"
+        android:top="@dimen/floating_view_badge_edge"
+        android:bottom="@dimen/floating_view_badge_edge">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@color/floating_view_badge_background"/>
+            <corners android:radius="@dimen/floating_view_badge_radius"/>
+        </shape>
+    </item>
+</layer-list>
