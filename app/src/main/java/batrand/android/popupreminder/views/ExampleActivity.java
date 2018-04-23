@@ -1,4 +1,4 @@
-package com.yalantis.beamazingtoday.sample;
+package batrand.android.popupreminder.views;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import com.yalantis.beamazingtoday.interfaces.BatModel;
 import com.yalantis.beamazingtoday.listeners.BatListener;
 import com.yalantis.beamazingtoday.listeners.OnItemClickListener;
 import com.yalantis.beamazingtoday.listeners.OnOutsideClickedListener;
+import com.yalantis.beamazingtoday.sample.Goal;
 import com.yalantis.beamazingtoday.ui.adapter.BatAdapter;
 import com.yalantis.beamazingtoday.ui.animator.BatItemAnimator;
 import com.yalantis.beamazingtoday.ui.callback.BatCallback;
@@ -22,6 +23,8 @@ import com.yalantis.beamazingtoday.util.TypefaceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import batrand.android.popupreminder.R;
 
 /**
  * Created by galata on 20.07.16.
@@ -49,11 +52,11 @@ public class ExampleActivity extends AppCompatActivity implements BatListener, O
 
         mRecyclerView.getView().setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.getView().setAdapter(mAdapter = new BatAdapter(mGoals = new ArrayList<BatModel>() {{
-            add(new Goal("first"));
-            add(new Goal("second"));
-            add(new Goal("third"));
-            add(new Goal("fourth"));
-            add(new Goal("fifth"));
+            add(new com.yalantis.beamazingtoday.sample.Goal("first"));
+            add(new com.yalantis.beamazingtoday.sample.Goal("second"));
+            add(new com.yalantis.beamazingtoday.sample.Goal("third"));
+            add(new com.yalantis.beamazingtoday.sample.Goal("fourth"));
+            add(new com.yalantis.beamazingtoday.sample.Goal("fifth"));
 //            add(new Goal("sixth"));
 //            add(new Goal("seventh"));
 //            add(new Goal("eighth"));

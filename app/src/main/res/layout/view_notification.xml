@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/page_padding"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/page_padding">
+
+        <TextView
+            android:id="@+id/notification_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2017-05-16"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:enabled="false"
+                    android:id="@+id/notification_selection_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/notification_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:layout_gravity="center_vertical"
+                    tools:text="Drink water!"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/notification_mark_seen_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/PrimaryColorBackgroundButton"
+                android:text="@string/mark_seen"
+                tools:enabled="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/notification_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="Molestiae autem et ab blanditiis. Assumenda et sit provident adipisci ex corrupti. Velit asperiores et ducimus doloremque quaerat qui et. Omnis illo sed ducimus illum possimus quaerat et. Veritatis itaque iste vero excepturi non ipsam.
+A illum quasi quis est dolorem voluptas natus. Aperiam beatae velit culpa ipsa facere aut. Modi eius quia a nulla sapiente quisquam. Veritatis provident id quisquam in. Nihil harum repellendus autem a."
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

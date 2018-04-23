@@ -1,12 +1,52 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">#0094DE</item>
+        <item name="popupMenuStyle">@style/Widget.AppCompat.Light.PopupMenu.Overflow</item>
+
+        <!--No action bar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="AppTheme.ActionBar" parent="AppTheme.Base">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+
+        <!--Dark action bar with light menu-->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+        <!--Action Mode styling-->
+        <item name="windowActionBarOverlay">false</item>
+        <item name="actionModeBackground">@color/colorAccent</item>
+        <item name="actionModeCloseDrawable">@drawable/close</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+
+    </style>
+
+    <style name="ReminderDetailTheme" parent="AppTheme.ActionBar">
+        <item name="homeAsUpIndicator">@drawable/close</item>
+    </style>
+
+    <style name="BottomBarTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ExpandedFloaterTitleStyle" parent="BottomBarTextStyle">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="PrimaryColorBackgroundButton" parent="@style/Widget.AppCompat.Button">
+        <item name="colorButtonNormal" >@color/primary_color_background_button_background</item>
+        <item name="android:textColor">@color/primary_color_background_button_text</item>
     </style>
 
 </resources>

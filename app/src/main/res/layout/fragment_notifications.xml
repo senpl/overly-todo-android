@@ -1,0 +1,57 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notifications_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="batrand.android.popupreminder.views.NotificationsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/minimalize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/PrimaryColorBackgroundButton"
+            android:text="@string/minimalize"
+            tools:enabled="true"/>
+
+        <!--<Button-->
+        <!--android:layout_alignBottom="@id/minimalize"-->
+            <!--android:id="@+id/notification_delete_seen_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:theme="@style/PrimaryColorBackgroundButton"-->
+        <!--android:text="@string/delete_seen"-->
+        <!--tools:enabled="true" />-->
+
+        <Spinner
+            android:id="@+id/spinner_context"
+            android:layout_toRightOf="@id/minimalize"
+            android:layout_width="260px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/minimalize"
+            android:id="@+id/notifications_recycler_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications_empty"
+            android:layout_centerInParent="true"
+            android:textStyle="italic" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/notifications_recycler_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <batrand.android.popupreminder.views.components.EmptyableRecyclerView
+                android:id="@+id/notifications_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

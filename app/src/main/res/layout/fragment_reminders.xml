@@ -1,0 +1,53 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reminders_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="batrand.android.popupreminder.views.RemindersFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/minimalize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/PrimaryColorBackgroundButton"
+            android:text="@string/minimalize"
+            tools:enabled="true"/>
+
+        <TextView
+            android:layout_below="@id/minimalize"
+            android:id="@+id/reminders_recycler_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reminders_empty"
+            android:layout_centerInParent="true"
+            android:textStyle="italic" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/reminders_recycler_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <batrand.android.popupreminder.views.components.EmptyableRecyclerView
+                android:id="@+id/reminders_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/reminders_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorAccent"
+        android:src="@drawable/plus"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"/>
+
+</android.support.design.widget.CoordinatorLayout>

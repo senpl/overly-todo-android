@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:contentPadding="10dp"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:id="@+id/floating_expanded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/floating_expanded_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_empty"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textStyle="italic" />
+
+            <batrand.android.popupreminder.views.components.EmptyableRecyclerView
+                android:id="@+id/floating_expanded_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/quick_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_task"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="false"
+                android:theme="@style/PrimaryColorBackgroundButton"/>
+
+            <CheckBox
+                android:id="@+id/quick_next_action_btm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next_action_short"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/expanded_view_open_app_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/expandedview_open_app"
+                android:theme="@style/PrimaryColorBackgroundButton" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
