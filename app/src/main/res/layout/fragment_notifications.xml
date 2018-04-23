@@ -1,4 +1,5 @@
 <android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/notifications_coordinator"
@@ -8,7 +9,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/view_notifications_all"
+        >
 
         <Button
             android:id="@+id/minimalize"
@@ -32,6 +35,16 @@
             android:layout_toRightOf="@id/minimalize"
             android:layout_width="260px"
             android:layout_height="wrap_content" />
+
+        <com.yalantis.beamazingtoday.ui.widget.BatRecyclerView
+            android:layout_below="@id/minimalize"
+            android:id="@+id/bat_recycler_view_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:add_button_color="@drawable/selector_button_add"
+            app:hint="@string/str_add_goal"
+            app:radio_button_res="@drawable/selector_radio_button" />
 
         <TextView
             android:layout_below="@id/minimalize"
