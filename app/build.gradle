@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.yalantis.beamazingtoday"
         minSdkVersion 21
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
@@ -29,7 +29,7 @@ android {
     }
 }
 
-ext.supportLibVersion = "26.1.0"
+ext.supportLibVersion = "27.0.2"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -79,4 +79,18 @@ dependencies {
 
 //    implementation 'com.github.yalantis:todolist:v1.0.1'
     implementation project(':library')
+    //fot google tasks synchoronization
+
+    implementation 'com.google.android.gms:play-services-auth:11.6.2'
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation ('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation ('com.google.apis:google-api-services-calendar:v3-rev255-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+
+    implementation ('com.google.apis:google-api-services-tasks:v1-rev48-1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
 }

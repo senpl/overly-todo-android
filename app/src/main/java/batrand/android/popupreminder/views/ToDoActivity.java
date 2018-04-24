@@ -21,9 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import batrand.android.popupreminder.R;
-import batrand.android.popupreminder.views2.Goal;
-
-//import android.support.constraint.solver.Goal;
 
 /**
  * Created by galata on 20.07.16.
@@ -40,13 +37,7 @@ public class ToDoActivity extends AppCompatActivity implements BatListener, OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("");
-
-//        ((TextView) findViewById(R.id.text_title)).setTypeface(TypefaceUtil.getAvenirTypeface(this));
-
-        mRecyclerView = (BatRecyclerView) findViewById(R.id.bat_recycler_view);
+        mRecyclerView = findViewById(R.id.bat_recycler_view);
         mAnimator = new BatItemAnimator();
 
         mRecyclerView.getView().setLayoutManager(new LinearLayoutManager(this));

@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!--for synchronisation google tasks-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
 
     <application
@@ -16,9 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--android:name=".views.MainActivity"-->
         <activity
             android:exported="true"
-            android:name=".views.MainActivity"
+            android:name=".views.MainActivity2"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.ActionBar">
             <intent-filter>
@@ -39,12 +43,6 @@
         android:parentActivityName=".views.MainActivity"
         android:theme="@style/ReminderDetailTheme" />
         <activity
-        android:name=".views.ToDoFragment"
-        android:exported="true"
-        android:label="@string/title_add_reminder"
-        android:parentActivityName=".views.MainActivity"
-        android:theme="@style/ReminderDetailTheme" />
-        <activity
         android:name=".views.SettingsActivity"
         android:label="@string/title_settings"
         android:parentActivityName=".views.MainActivity"
@@ -59,15 +57,16 @@
         android:label="@string/title_about_audio"
         android:parentActivityName=".views.AboutActivity"
         android:theme="@style/AppTheme.ActionBar" />
-        <activity
-        android:name=".views.ToDoActivity"
-        android:exported="true"
-        android:launchMode="singleTop">
-        <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN" />-->
-        <!--<category android:name="android.intent.category.LAUNCHER" />-->
-        <!--</intent-filter>-->
-        </activity>
+        <!--<activity-->
+        <!--android:name=".views.MainActivity2"-->
+        <!--android:exported="true"-->
+        <!--android:launchMode="singleTop">-->
+        <!--</activity>-->
+        <!--<activity-->
+        <!--android:name=".views.ToDoActivity"-->
+        <!--android:exported="true"-->
+        <!--android:launchMode="singleTop">-->
+        <!--</activity>-->
         <!--<activity-->
         <!--android:name=".views2.MainActivity"-->
         <!--android:exported="true"-->
